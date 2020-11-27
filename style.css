@@ -13,6 +13,7 @@
     --black-color: #222;
     --light-color: #F3F3F3;
     --red-color: #C92424;
+    --red2-color: #691212;
     --black-color: #222;
     background-color: #000;
 }
@@ -157,6 +158,25 @@ p, .multiplier{
     opacity: 0.8;
 }
 
+.tb-2, .tb-3{
+    grid-column: 1;
+}
+
+.tb-4, .tb-5, .tb-6{
+    grid-column: 2;
+}
+
+.tb-7, .tb-8, .tb-9{
+    grid-column: 3;
+}
+
+.tb-2, .tb-5, .tb-8{
+    grid-row: 3;
+}
+
+.tb-3, .tb-6, .tb-9{
+    grid-row: 4;
+}
 
 .table div{
     display: flex;
@@ -171,6 +191,8 @@ p, .multiplier{
     width: 100%;
 }
 
+/* .messages/alerts */
+
 .message{
     font-size: 2.5rem;
     /* line-height: 3.5rem; */
@@ -182,6 +204,38 @@ p, .multiplier{
     margin-top: 0.2rem;
     margin-bottom: 0.5rem;
 }
+
+.alert{
+    background: -webkit-linear-gradient(var(--red-color), var(--red2-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.alert:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
 
 
 /* board */
